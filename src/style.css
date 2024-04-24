@@ -335,6 +335,7 @@ body {
 .main {
   display: flex;
   flex-wrap: wrap;
+  gap: 16px;
   max-height: 180px;
   overflow: hidden;
   transition: max-height 0.2s ease 0s;
@@ -363,7 +364,7 @@ body {
   border: 1px solid #eaeaea;
   border-radius: 5px;
   padding: 0 16px 0 16px;
-  margin: 8px 8px 8px 24px;
+  margin-left: 24px;
 }
 
 .hidden {
@@ -701,6 +702,11 @@ body {
 .table-container {
   margin-left: 24px;
 }
+@media screen and (max-width: 768px) {
+  .table-container {
+    display: none;
+  }
+}
 
 .price {
   width: max-width;
@@ -765,6 +771,46 @@ td {
   font-weight: 500;
   color: #1b1c21;
   padding-right: 10px;
+}
+
+.table-container-m {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .table-container-m {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 24px;
+    gap: 16px;
+  }
+}
+
+.table__cell-m {
+  width: 228px;
+  height: 168px;
+  background-color: #ffffff;
+  font-size: 14px;
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 5px;
+}
+
+.cell-name-m {
+  margin: 0 0 4px 0;
+  color: #7e7e82;
+}
+
+.cell-content-m {
+  margin: 0 0 16px 0;
+}
+
+.last-cell-m {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-doc {
+  margin-left: 24px;
 }
 
 .main-footer {
